@@ -1,9 +1,9 @@
-<script setup lang='ts'>
+<script setup lang="ts">
 import { ref } from 'vue'
 import { IAccordion } from '~/interfaces/IAccordion'
 
 defineProps<{
-  accordion: IAccordion
+  accordion: IAccordion;
 }>()
 
 const isShowDescription = ref<boolean>(false)
@@ -24,13 +24,10 @@ function changeDescriptionVisibility () {
 </script>
 
 <template>
-  <div
-    class="accordion"
-    @click="changeDescriptionVisibility"
-  >
+  <div class="accordion" @click="changeDescriptionVisibility">
     <div class="accordion__head">
       <p class="accordion__title">
-        {{ accordion.id + '. ' + accordion.title }}
+        {{ accordion.id + ". " + accordion.title }}
       </p>
       <div class="accordion__arrow">
         <img
@@ -45,10 +42,7 @@ function changeDescriptionVisibility () {
         >
       </div>
     </div>
-    <p
-      ref="description"
-      class="accordion__description"
-    >
+    <p ref="description" class="accordion__description">
       <br>
       {{ accordion.text }}
     </p>
@@ -79,7 +73,7 @@ function changeDescriptionVisibility () {
     font-weight: 500;
     max-height: 0;
     overflow: hidden;
-    transition: max-height .3s;
+    transition: max-height 0.3s;
   }
 }
 </style>

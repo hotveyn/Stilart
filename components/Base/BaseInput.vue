@@ -1,6 +1,6 @@
 <script setup lang="ts">
 defineProps<{
-  labelText: string
+  labelText: string;
 }>()
 const modelValue = defineModel()
 </script>
@@ -8,11 +8,8 @@ const modelValue = defineModel()
 <template>
   <label class="w input">
     <span class="input__label-text">{{ labelText }}</span>
-    <input
-      v-model="modelValue"
-      class="input__input w"
-      v-bind="$attrs"
-    >
+
+    <input v-model="modelValue" class="input__input w" v-bind="$attrs">
   </label>
 </template>
 
@@ -37,12 +34,13 @@ const modelValue = defineModel()
     font-style: normal;
     font-weight: 400;
 
-    &:focus, &:active {
+    &:focus,
+    &:active {
       outline: none;
     }
 
     &::placeholder {
-      color: rgba(255, 255, 255, 0.60);
+      color: rgba(255, 255, 255, 0.6);
       font-weight: 300;
     }
   }

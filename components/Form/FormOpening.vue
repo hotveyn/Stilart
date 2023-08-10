@@ -1,10 +1,13 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 const form = ref<HTMLInputElement | null>(null)
-const nameF = ref('')
-const mailF = ref('')
+const nameF = ref<string>('')
+const mailF = ref<string>('')
+const checkboxF = ref<boolean>(false)
 function goMail () {
-  if (!form.value) { return }
+  if (!form.value) {
+    return
+  }
 
   if (form.value.checkValidity()) {
     console.log('Form submitted successfully')
@@ -19,9 +22,15 @@ function goMail () {
     <p class="form-opening__title">
       Оставте заявку
     </p>
-    <BaseInput v-model.trim="nameF" required label-text="Имя" placeholder="Тихон" type="text" />
-    <BaseInput v-model.trim="mailF" required label-text="Электронная почта" placeholder="example@mail.ru" type="email" />
-    <BaseCheckbox required label-text="Согласие на обработку перс. данных" />
+    <BaseInput v-model="nameF" required label-text="Имя" placeholder="Тихон" type="text" />
+    <BaseInput
+      v-model="mailF"
+      required
+      label-text="Электронная почта"
+      placeholder="example@mail.ru"
+      type="email"
+    />
+    <BaseCheckbox v-model="checkboxF" required label-text="Согласие на обработку перс. данных" />
     <BaseButton type="transparent" @click.prevent="goMail">
       Отправить
     </BaseButton>

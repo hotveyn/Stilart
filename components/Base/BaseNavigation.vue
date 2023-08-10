@@ -1,47 +1,32 @@
 <script setup lang="ts">
-withDefaults(defineProps<{
-  type: 'footer' | 'header'
-}>(), { type: 'header' })
+withDefaults(
+  defineProps<{
+    type: 'footer' | 'header';
+  }>(),
+  { type: 'header' }
+)
 </script>
 
 <template>
   <nav :class="[`nav_${type}`]" class="nav">
     <ul class="nav__items">
       <li class="nav__item">
-        <a
-          href="#about"
-          class="a"
-        >О нас</a>
+        <a href="#about" class="a">О нас</a>
       </li>
       <li class="nav__item">
-        <a
-          href="#stages"
-          class="a"
-        >Этапы работ</a>
+        <a href="#stages" class="a">Этапы работ</a>
       </li>
       <li class="nav__item">
-        <a
-          href="#services"
-          class="a"
-        >Услуги</a>
+        <a href="#services" class="a">Услуги</a>
       </li>
       <li class="nav__item">
-        <a
-          href="#projects"
-          class="a"
-        >Проекты</a>
+        <a href="#projects" class="a">Проекты</a>
       </li>
       <li class="nav__item">
-        <a
-          href="#faq"
-          class="a"
-        >Вопрос ответ</a>
+        <a href="#faq" class="a">Вопрос ответ</a>
       </li>
       <li class="nav__item">
-        <a
-          href="#contacts"
-          class="a"
-        >Контакты</a>
+        <a href="#contacts" class="a">Контакты</a>
       </li>
     </ul>
   </nav>

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 defineProps<{
-  labelText: string
+  labelText: string;
 }>()
 const modelValue = defineModel()
 </script>
@@ -48,7 +48,7 @@ const modelValue = defineModel()
     width: 20px;
     background-color: #eee;
 
-    &:after{
+    &:after {
       content: "";
       position: absolute;
       display: none;
@@ -63,7 +63,7 @@ const modelValue = defineModel()
     background-color: $tree;
   }
 
-  & input:checked ~ &__custom:after{
+  & input:checked ~ &__custom:after {
     display: block;
     left: 6px;
     top: 2px;

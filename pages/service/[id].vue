@@ -1,9 +1,7 @@
-<script setup lang="ts">
-const route = useRoute()
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <h2>{{ route.params.id }}</h2>
+  <h2>service</h2>
 </template>
 
 <style scoped lang="scss"></style>

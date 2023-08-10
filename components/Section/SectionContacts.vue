@@ -56,11 +56,7 @@
             </div>
           </div>
         </div>
-        <img
-          class="contacts__map"
-          src="/images/example/map.png"
-          alt="map"
-        >
+        <img class="contacts__map" src="/images/example/map.png" alt="map">
       </div>
     </div>
   </div>

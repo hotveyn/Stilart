@@ -8,11 +8,7 @@ import TheOpening from '~/components/header/sections/SectionOpening.vue'
     <header class="header w">
       <div class="container header__content">
         <NuxtLink to="/">
-          <img
-            src="/images/logo/logoW.svg"
-            alt="logo"
-            class="header__logo"
-          >
+          <img src="/images/logo/logoW.svg" alt="logo" class="header__logo">
         </NuxtLink>
         <BaseNavigation type="header" class="header__nav" />
       </div>
@@ -22,8 +18,15 @@ import TheOpening from '~/components/header/sections/SectionOpening.vue'
 </template>
 
 <style scoped lang="scss">
-.header-wrapper{
-  background: linear-gradient(0deg, rgba(101, 83, 40, 0.50) 0%, rgba(101, 83, 40, 0.50) 100%), url('/images/bg/opening.png') no-repeat, lightgray 50% / cover no-repeat;
+.header-wrapper {
+  background:
+    linear-gradient(
+      0deg,
+      rgba(101, 83, 40, 0.5) 0%,
+      rgba(101, 83, 40, 0.5) 100%
+    ),
+    url("/images/bg/opening.png") no-repeat,
+    lightgray 50% / cover no-repeat;
   background-size: cover;
   background-position: center;
   margin-bottom: 120px;

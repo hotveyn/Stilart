@@ -4,23 +4,27 @@ import FormOpening from '~/components/Form/FormOpening.vue'
 
 <template>
   <section class="opening w">
-    <div class="container opening__content ">
+    <div class="container opening__content">
       <div class="opening__left">
         <h2 class="opening__title h2">
           Стильный и строгий интерьер для вашего любимого дома
         </h2>
         <div class="opening__glasses">
           <BaseGlass class="opening__glass opening__glass_1">
-            Интерьер для кухни <br> от 14 440₽
+            Интерьер для кухни <br>
+            от 14 440₽
           </BaseGlass>
           <BaseGlass class="opening__glass opening__glass_2">
-            Интерьер для гостиной <br> от 18 999₽
+            Интерьер для гостиной <br>
+            от 18 999₽
           </BaseGlass>
           <BaseGlass class="opening__glass opening__glass_3">
-            Интерьер для спальни <br> от 16 999₽
+            Интерьер для спальни <br>
+            от 16 999₽
           </BaseGlass>
           <BaseGlass class="opening__glass opening__glass_4">
-            Интерьер для ванной <br> от 19 999₽
+            Интерьер для ванной <br>
+            от 19 999₽
           </BaseGlass>
         </div>
       </div>
@@ -89,5 +93,4 @@ import FormOpening from '~/components/Form/FormOpening.vue'
     text-transform: uppercase;
   }
 }
-
 </style>

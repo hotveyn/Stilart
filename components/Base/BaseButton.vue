@@ -1,15 +1,22 @@
 <script setup lang="ts">
-
-withDefaults(defineProps<{
-  type: 'transparent' | 'flat',
-  to?: string | undefined
-}>(), { type: 'transparent' })
+withDefaults(
+  defineProps<{
+    type: 'transparent' | 'flat';
+    to?: string | undefined;
+  }>(),
+  { type: 'transparent' }
+)
 
 const NuxtLink = resolveComponent('NuxtLink')
 </script>
 
 <template>
-  <Component :is="to ? NuxtLink: 'button'" :to="to" :class="[`button_${type}`]" class="button">
+  <Component
+    :is="to ? NuxtLink : 'button'"
+    :to="to"
+    :class="[`button_${type}`]"
+    class="button"
+  >
     <slot />
   </Component>
 </template>
@@ -38,8 +45,9 @@ const NuxtLink = resolveComponent('NuxtLink')
     background-color: rgba(0, 0, 0, 0);
     color: $tree;
     font-size: 22px;
-    transition: color .2s, background-color .2s;
-
+    transition:
+      color 0.2s,
+      background-color 0.2s;
   }
 }
 </style>

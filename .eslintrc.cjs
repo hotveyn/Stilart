@@ -4,14 +4,14 @@ module.exports = {
     browser: true,
     node: true,
   },
-  parser: 'vue-eslint-parser',
+  parser: "vue-eslint-parser",
   parserOptions: {
-    parser: '@typescript-eslint/parser',
-    sourceType: 'module',
+    parser: "@typescript-eslint/parser",
+    sourceType: "module",
   },
-  extends: ['@nuxtjs/eslint-config-typescript', 'plugin:vue/essential'],
+  extends: ["@nuxtjs/eslint-config-typescript", "plugin:vue/essential"],
   plugins: [],
   rules: {
-    'vue/multi-word-component-names': 'off',
+    "vue/multi-word-component-names": "off",
   },
-}
+};

@@ -8,10 +8,7 @@ import BaseNavigation from '~/components/Base/BaseNavigation.vue'
     <SectionContacts class="footer__contacts" />
     <div class="container footer__content">
       <NuxtLink to="/">
-        <img
-          src="/images/logo/logoB.svg"
-          alt="logo"
-        >
+        <img src="/images/logo/logoB.svg" alt="logo">
       </NuxtLink>
       <BaseNavigation type="footer" class="footer__nav" />
     </div>
