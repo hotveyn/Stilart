@@ -5,42 +5,42 @@ const services: IService[] = [
   {
     id: 1,
     img: 'services1.png',
-    title: 'title',
+    title: 'Консультация',
     description:
       'All Inclusive подразумевает, что после общения с клиентом всем процессом ремонта занимается дизайнер.'
   },
   {
     id: 2,
     img: 'services2.png',
-    title: 'title',
+    title: 'Авторский контроль',
     description:
       'All Inclusive подразумевает, что после общения с клиентом всем процессом ремонта занимается дизайнер.'
   },
   {
     id: 3,
     img: 'services2.png',
-    title: 'title',
+    title: 'Перепланировка',
     description:
       'All Inclusive подразумевает, что после общения с клиентом всем процессом ремонта занимается дизайнер.'
   },
   {
     id: 4,
     img: 'services4.png',
-    title: 'title',
+    title: 'Снабжение',
     description:
       'All Inclusive подразумевает, что после общения с клиентом всем процессом ремонта занимается дизайнер.'
   },
   {
     id: 5,
     img: 'services5.png',
-    title: 'title',
+    title: 'Комплектация',
     description:
       'All Inclusive подразумевает, что после общения с клиентом всем процессом ремонта занимается дизайнер.'
   },
   {
     id: 6,
     img: 'services6.png',
-    title: 'title',
+    title: 'Поддержка',
     description:
       'All Inclusive подразумевает, что после общения с клиентом всем процессом ремонта занимается дизайнер.'
   }
@@ -150,7 +150,7 @@ const services: IService[] = [
   &__description {
     text-align: center;
     position: absolute;
-    font-size: 22px;
+    font-size: 21px;
     font-style: normal;
     font-weight: 500;
     line-height: 145%;
