@@ -46,6 +46,8 @@
   &__image {
     aspect-ratio: 480 / 360;
     width: 440px;
+    transition: transform  .2s;
+    transform-origin: 0 0;
 
     &_2 {
       transform: translateY(-50%);

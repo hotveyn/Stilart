@@ -62,9 +62,25 @@
 
 .project-card {
   min-height: 350px;
+  transition: .2s;
+  overflow: hidden;
+  z-index: 2;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 0 10px #3a3a3a;
+    z-index: 3;
+    transform: translateX(20px);
+    border-radius: 2px;
+  }
 
   &:nth-child(2) {
     height: 100%;
+
+    &:hover {
+
+      transform: translateX(-20px);
+    }
   }
 
   &__image {

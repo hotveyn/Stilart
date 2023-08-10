@@ -88,7 +88,7 @@ const services: IService[] = [
 .services {
   width: 100%;
   padding: 110px 0;
-  background-color: $tree;
+  background:linear-gradient(90deg, $tree, #dccda5);
   color: $white;
 
   &__cards {
@@ -104,6 +104,7 @@ const services: IService[] = [
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
   border-radius: 4px;
   border: 2px solid #fff;
   max-width: 380px;
