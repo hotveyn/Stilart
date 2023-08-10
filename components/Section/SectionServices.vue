@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { IService } from '~/types/IService'
+import { IService } from '~/interfaces/IService'
 
 const services: IService[] = [
   {
