@@ -1,7 +1,7 @@
 <script setup lang="ts">
 withDefaults(
   defineProps<{
-    type: 'footer' | 'header';
+    type: 'footer' | 'header' | 'wide';
   }>(),
   { type: 'header' }
 )
@@ -9,24 +9,36 @@ withDefaults(
 
 <template>
   <nav :class="[`nav_${type}`]" class="nav">
-    <ul class="nav__items">
+    <ul class="nav__items w">
       <li class="nav__item">
-        <a href="#about" class="a">О нас</a>
+        <NuxtLink to="/#about" class="a">
+          О нас
+        </NuxtLink>
       </li>
       <li class="nav__item">
-        <a href="#stages" class="a">Этапы работ</a>
+        <NuxtLink to="/#stages" class="a">
+          Этапы работ
+        </NuxtLink>
       </li>
       <li class="nav__item">
-        <a href="#services" class="a">Услуги</a>
+        <NuxtLink to="/#services" class="a">
+          Услуги
+        </NuxtLink>
       </li>
       <li class="nav__item">
-        <a href="#projects" class="a">Проекты</a>
+        <NuxtLink to="/#projects" class="a">
+          Проекты
+        </NuxtLink>
       </li>
       <li class="nav__item">
-        <a href="#faq" class="a">Вопрос ответ</a>
+        <NuxtLink to="/#faq" class="a">
+          Вопрос ответ
+        </NuxtLink>
       </li>
       <li class="nav__item">
-        <a href="#contacts" class="a">Контакты</a>
+        <NuxtLink to="/#contacts" class="a">
+          Контакты
+        </NuxtLink>
       </li>
     </ul>
   </nav>
@@ -41,6 +53,15 @@ withDefaults(
     display: flex;
     align-items: center;
     gap: 35px;
+  }
+
+  &_wide{
+    width: 100%;
+  }
+  &_wide &__items{
+    width: 100%;
+    justify-content: space-between;
+    color: white;
   }
 
   .a {

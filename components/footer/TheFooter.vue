@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import SectionContacts from '~/components/Section/SectionContacts.vue'
+import SectionContacts from '~/components/Section/Index/SectionIndexContacts.vue'
 import BaseNavigation from '~/components/Base/BaseNavigation.vue'
 </script>
 
