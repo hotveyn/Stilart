@@ -56,6 +56,7 @@ const members = ref([
     font-style: normal;
     font-weight: 500;
     width: min(1300px, 100%);
+    line-height: 145%;
   }
 
   &__cards {

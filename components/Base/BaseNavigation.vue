@@ -55,10 +55,12 @@ withDefaults(
     gap: 35px;
   }
 
-  &_wide{
+  &_wide {
     width: 100%;
+
   }
-  &_wide &__items{
+
+  &_wide &__items {
     width: 100%;
     justify-content: space-between;
     color: white;
