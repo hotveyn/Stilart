@@ -33,7 +33,7 @@ const members = ref([
       </p>
       <div class="command__cards">
         <div v-for="member in members" :key="member.id" class="command__card command-card">
-          <img class="command-card__img" :src="`/public/images/members/${member.img}`" alt="member">
+          <img class="command-card__img" :src="`/images/members/${member.img}`" alt="member">
           <div class="command-card__info">
             <h3 class="command-card__proff h3">
               {{ member.prof }}
