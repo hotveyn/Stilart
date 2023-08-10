@@ -7,8 +7,11 @@ module.exports = {
   parser: 'vue-eslint-parser',
   parserOptions: {
     parser: '@typescript-eslint/parser',
+    sourceType: 'module',
   },
-  extends: ['@nuxtjs/eslint-config-typescript', 'plugin:prettier/recommended'],
+  extends: ['@nuxtjs/eslint-config-typescript', 'plugin:vue/essential'],
   plugins: [],
-  rules: {},
-};
+  rules: {
+    'vue/multi-word-component-names': 'off',
+  },
+}
