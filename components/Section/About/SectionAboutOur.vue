@@ -1,0 +1,59 @@
+<script setup lang="ts">
+
+</script>
+
+<template>
+  <section class="our">
+    <div class="container-bg">
+      <h2 class="our__title h2">
+        Наша компания предоставляет услуги по дизайну интерьеров.
+      </h2>
+      <p class="our__description">
+        Мы берем на себя ответственность за расчеты и подбор материалов, чтобы клиенты могли быть уверены в прозрачности и точности всех затрат.
+      </p>
+      <div class="our__images">
+        <img src="/images/projects/projects2.png" alt="our" class="our__image our__image_1">
+        <img src="/images/projects/projects1.png" alt="our" class="our__image our__image_2">
+        <img src="/images/projects/projects3.png" alt="our" class="our__image our__image_3">
+      </div>
+    </div>
+  </section>
+</template>
+
+<style scoped lang="scss">
+.our {
+
+  &__title {
+    text-transform: none;
+  }
+
+  &__description {
+    width: min(880px, 100%);
+    margin-top: 55px;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 145%;
+  }
+
+  &__images {
+    margin-top: 215px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__image {
+    aspect-ratio: 480 / 360;
+    width: 440px;
+
+    &_2 {
+      transform: translateY(-50%);
+    }
+
+    &_3 {
+      transform: translateY(-100%);
+    }
+  }
+}
+</style>

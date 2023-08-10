@@ -26,7 +26,7 @@
         </div>
         <div class="stages-grid__unit">
           <div class="stages-grid__number stages-grid__number_final">
-            <img src="../../assets/icons/check.svg" alt="c">
+            <img src="../../../assets/icons/check.svg" alt="c">
           </div>
         </div>
         <div class="stages-grid__card sg-card">
