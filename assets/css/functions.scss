@@ -1,6 +1,5 @@
-@function adpval($min, $max, $max-wrapper-size: 1000, $min-wrapper-size: 320) {
+@function adpval($min, $max, $max-wrapper-size: 1180, $min-wrapper-size: 320) {
   @return calc(
-    #{$min + px} + #{$max - $min} *
-      ((100vw - #{$min-wrapper-size + px}) / #{$max-wrapper-size})
+    #{$min + px} + #{$max - $min} * ((100vw - #{$min-wrapper-size + px}) / #{$max-wrapper-size})
   );
 }
