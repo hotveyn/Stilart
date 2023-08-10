@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import ScreenIndex from '~/screen/index/ScreenIndex.vue';
+import ScreenIndex from '~/screens/index/ScreenIndex.vue'
 </script>
 
 <template>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import ScreenAbout from '~/screen/about/ScreenAbout.vue';
+import ScreenAbout from '~/screens/about/ScreenAbout.vue'
 </script>
 
 <template>
