@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import FormOpening from '~/components/Form/FormOpening.vue'
+import FormOpening from '~/components/form/FormOpening.vue'
+import BaseGlass from '~/components/base/BaseGlass.vue'
 </script>
 
 <template>

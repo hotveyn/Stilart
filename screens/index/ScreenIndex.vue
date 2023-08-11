@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import SectionAbout from '~/components/Section/Index/SectionIndexAbout.vue'
-import SectionProjects from '~/components/Section/Index/SectionIndexProjects.vue'
-import SectionServices from '~/components/Section/Index/SectionIndexServices.vue'
-import SectionStages from '~/components/Section/Index/SectionIndexStages.vue'
-import SectionFAQ from '~/components/Section/Index/SectionIndexFAQ.vue'
+import SectionAbout from '~/components/section/index/SectionIndexAbout.vue'
+import SectionProjects from '~/components/section/index/SectionIndexProjects.vue'
+import SectionServices from '~/components/section/index/SectionIndexServices.vue'
+import SectionStages from '~/components/section/index/SectionIndexStages.vue'
+import SectionFAQ from '~/components/section/index/SectionIndexFAQ.vue'
 </script>
 
 <template>

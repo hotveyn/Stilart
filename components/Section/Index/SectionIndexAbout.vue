@@ -1,10 +1,12 @@
 <script setup lang="ts">
 // TODO: gen
+import BaseButton from '~/components/base/BaseButton.vue'
+import BaseLine from '~/components/base/BaseLine.vue'
 </script>
 
 <template>
   <section id="about" class="about">
-    <div class="container">
+    <div class="container about__content">
       <h2 class="about__title h2">
         О нас
       </h2>
@@ -46,15 +48,24 @@
           >
         </div>
       </div>
-      <BaseButton class="about__link" type="flat" to="/about">
+      <BaseButton class="about__link" type="primary" to="/about">
         Читать подробнее
       </BaseButton>
     </div>
+    <BaseLine color="wood" width="45%" bottom="55%" />
+    <BaseLine color="wood" width="50%" top="10%" right="0" />
+    <BaseLine color="wood" width="85%" bottom="10%" right="0" />
   </section>
 </template>
 
 <style scoped lang="scss">
 .about {
+  position: relative;
+
+  &__content {
+    z-index: 1;
+  }
+
   &__items {
     display: grid;
     grid-template-columns: 1fr;
@@ -63,7 +74,6 @@
 
   &__link {
     margin: 30px auto 0;
-    color: black;
   }
 }
 

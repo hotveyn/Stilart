@@ -1,12 +1,14 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import BaseLine from '~/components/base/BaseLine.vue'
+</script>
 
 <template>
   <div id="contacts" class="contacts">
-    <div class="container">
+    <div class="container contacts__content">
       <h2 class="h2 contacts__title">
         Контакты
       </h2>
-      <div class="contacts__content">
+      <div class="contacts__dual">
         <div class="contacts__info">
           <div class="contacts__section">
             <h3 class="h3 contacts__subtitle">
@@ -59,16 +61,23 @@
         <img class="contacts__map" src="/images/example/map.png" alt="map">
       </div>
     </div>
+    <BaseLine color="white" top="20%" width="100%" />
+    <BaseLine color="white" bottom="22%" width="60%" />
   </div>
 </template>
 
 <style scoped lang="scss">
 .contacts {
+  position: relative;
   padding: 110px 0;
   background-color: $tree;
   color: $white;
 
   &__content {
+    z-index: 2;
+  }
+
+  &__dual {
     height: 590px;
     margin-top: 50px;
     display: flex;

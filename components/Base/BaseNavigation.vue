@@ -11,6 +11,11 @@ withDefaults(
   <nav :class="[`nav_${type}`]" class="nav">
     <ul class="nav__items w">
       <li class="nav__item">
+        <NuxtLink to="/" class="a">
+          Главная
+        </NuxtLink>
+      </li>
+      <li class="nav__item">
         <NuxtLink to="/#about" class="a">
           О нас
         </NuxtLink>

@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import BaseNavigation from '~/components/Base/BaseNavigation.vue'
-import TheOpening from '~/components/header/sections/SectionOpening.vue'
+import BaseNavigation from '~/components/base/BaseNavigation.vue'
+import TheOpening from '~/components/section/the-header/SectionOpening.vue'
 </script>
 
 <template>
@@ -20,16 +20,12 @@ import TheOpening from '~/components/header/sections/SectionOpening.vue'
 <style scoped lang="scss">
 .header-wrapper {
   background:
-    linear-gradient(
-      0deg,
-      rgba(101, 83, 40, 0.5) 0%,
-      rgba(101, 83, 40, 0.5) 100%
-    ),
-    url("/images/bg/opening.png") no-repeat,
-    lightgray 50% / cover no-repeat;
+    linear-gradient($trnsp-d-tree, $trnsp-d-tree), url("/images/bg/opening.png") no-repeat;
   background-size: cover;
   background-position: center;
   margin-bottom: 120px;
+  height: 100dvh;
+  max-height: 1080px;
 }
 
 .header {

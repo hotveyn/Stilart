@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import SectionAboutCommand from '~/components/Section/About/SectionAboutCommand.vue'
+import SectionAboutCommand from '~/components/section/about/SectionAboutCommand.vue'
+import SectionAboutOur from '~/components/section/about/SectionAboutOur.vue'
 </script>
 
 <template>

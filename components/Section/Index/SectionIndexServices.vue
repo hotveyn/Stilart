@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { IService } from '~/interfaces/IService'
+import BaseLine from '~/components/base/BaseLine.vue'
 
 const services: IService[] = [
   {
@@ -81,15 +82,25 @@ const services: IService[] = [
         </NuxtLink>
       </div>
     </div>
+    <BaseLine color="white" top="25%" width="80%" />
+    <BaseLine color="white" left="30%" top="0" height="80%" />
+    <BaseLine color="white" bottom="25%" right="0" width="80%" />
+    <BaseLine color="white" right="30%" height="80%" />
   </section>
 </template>
 
 <style scoped lang="scss">
 .services {
+  overflow: hidden;
+  position: relative;
   width: 100%;
   padding: 110px 0;
-  background:linear-gradient(90deg, $tree, #dccda5);
+  background: linear-gradient(145deg, $tree, #e1c5a0);
   color: $white;
+
+  &__content {
+    z-index: 1;
+  }
 
   &__cards {
     margin-top: 30px;

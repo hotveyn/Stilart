@@ -1,7 +1,7 @@
 <script setup lang="ts">
 withDefaults(
   defineProps<{
-    type: 'transparent' | 'flat';
+    type: 'transparent' | 'flat' | 'primary';
     to?: string | undefined;
   }>(),
   { type: 'transparent' }
@@ -23,9 +23,9 @@ const NuxtLink = resolveComponent('NuxtLink')
 
 <style scoped lang="scss">
 .button {
+  width: fit-content;
   cursor: pointer;
   display: flex;
-  width: 100%;
   padding: 16px;
   justify-content: center;
   align-items: center;
@@ -48,6 +48,12 @@ const NuxtLink = resolveComponent('NuxtLink')
     transition:
       color 0.2s,
       background-color 0.2s;
+  }
+
+  &_primary{
+    background-color: $tree;
+    border: 1px solid $tree;
+    color: $white;
   }
 }
 </style>

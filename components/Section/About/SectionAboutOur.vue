@@ -46,16 +46,44 @@
   &__image {
     aspect-ratio: 480 / 360;
     width: 440px;
-    transition: transform  .2s;
+    transition: transform 2s;
     transform-origin: 0 0;
 
     &_2 {
-      transform: translateY(-50%);
+      animation: trnsf2 .5s ease-in-out forwards;
+      animation-delay: .5s;
     }
 
     &_3 {
-      transform: translateY(-100%);
+      animation: trnsf3 .5s ease-in-out forwards;
+      animation-delay: 1s;
     }
+  }
+}
+
+@keyframes trnsf2 {
+  from {
+    transform: translateY(0);
+  }
+  50%{
+    aspect-ratio: 430 / 360;
+  }
+  to {
+    transform: translateY(-50%);
+    aspect-ratio: 480 / 360;
+  }
+}
+
+@keyframes trnsf3 {
+  from {
+    transform: translateY(0);
+  }
+  50%{
+    aspect-ratio: 430 / 360;
+  }
+  to {
+    transform: translateY(-100%);
+    aspect-ratio: 480 / 360;
   }
 }
 </style>

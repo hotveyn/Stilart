@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import BaseInput from '~/components/base/BaseInput.vue'
+import BaseCheckbox from '~/components/base/BaseCheckbox.vue'
+import BaseButton from '~/components/base/BaseButton.vue'
 const form = ref<HTMLInputElement | null>(null)
 const nameF = ref<string>('')
 const mailF = ref<string>('')
@@ -10,7 +13,7 @@ function goMail () {
   }
 
   if (form.value.checkValidity()) {
-    console.log('Form submitted successfully')
+    console.log('form submitted successfully')
   } else {
     form.value.reportValidity()
   }
@@ -31,7 +34,7 @@ function goMail () {
       type="email"
     />
     <BaseCheckbox v-model="checkboxF" required label-text="Согласие на обработку перс. данных" />
-    <BaseButton type="transparent" @click.prevent="goMail">
+    <BaseButton class="w" type="transparent" @click.prevent="goMail">
       Отправить
     </BaseButton>
   </form>

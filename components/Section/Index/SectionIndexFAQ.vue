@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import BaseAccordion from '~/components/Base/BaseAccordion.vue'
+import BaseAccordion from '~/components/base/BaseAccordion.vue'
 import { IAccordion } from '~/interfaces/IAccordion'
 
 // TODO: заполнить
