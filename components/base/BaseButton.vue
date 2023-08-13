@@ -51,8 +51,8 @@ const NuxtLink = resolveComponent('NuxtLink')
   }
 
   &_primary {
-    background-color: $tree;
-    border: 1px solid $tree;
+    background-color: $d-tree;
+    border: 1px solid $d-tree;
     color: $white;
   }
 }
