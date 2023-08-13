@@ -38,14 +38,14 @@ function changeBurgerVisibility () {
 
 <style scoped lang="scss">
 .header-wrapper {
-  background:
-    linear-gradient($trnsp-d-tree, $trnsp-d-tree),
-    url("/images/bg/opening.png") no-repeat;
+  background: linear-gradient($trnsp-d-tree, $trnsp-d-tree),
+  url("/images/bg/opening.png") no-repeat;
   background-size: cover;
   background-position: center;
-  margin-bottom: 120px;
-  height: 100dvh;
-  max-height: 1080px;
+  margin-bottom: adpval(80, 120);
+  //height: 100dvh;
+  //max-height: 1080px;
+  //min-height: 700px;
 }
 
 .header {

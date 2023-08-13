@@ -17,8 +17,8 @@ defineEmits<{
   position: fixed;
   left: 0;
   top: 0;
-  width: 100dvw;
-  height: 100dvh;
+  width: 100vw;
+  height: 100vh;
   backdrop-filter: brightness(0.6);
   z-index: 4;
   display: flex;
