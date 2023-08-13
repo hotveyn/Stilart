@@ -12,7 +12,7 @@
         <div class="projects__card project-card w">
           <img
             src="/images/projects/projects4.png"
-            alt="project"
+            alt="Проект компании StilArt"
             class="project-card__image w"
           >
           <div class="project-card__info">
@@ -25,7 +25,7 @@
         <div class="projects__card project-card w">
           <img
             src="/images/projects/projects5.png"
-            alt="project"
+            alt="Проект компании StilArt"
             class="project-card__image w"
           >
           <div class="project-card__info">
@@ -38,7 +38,7 @@
         <div class="projects__card project-card w">
           <img
             src="/images/projects/projects6.png"
-            alt="project"
+            alt="Проект компании StilArt"
             class="project-card__image w"
           >
           <div class="project-card__info">

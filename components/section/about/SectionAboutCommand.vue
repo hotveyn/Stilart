@@ -44,7 +44,7 @@ const members = ref([
           <img
             class="command-card__img"
             :src="`/images/members/${member.img}`"
-            alt="member"
+            alt="Участник команды StilArt"
           >
           <div class="command-card__info">
             <h3 class="command-card__proff h3">

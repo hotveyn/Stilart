@@ -7,9 +7,9 @@ import BaseGlass from '~/components/base/BaseGlass.vue'
   <section class="opening w">
     <div class="container opening__content">
       <div class="opening__left">
-        <h2 class="opening__title">
-          Стильный и строгий интерьер для вашего любимого дома
-        </h2>
+        <h1 class="opening__title">
+          Уютный дизайн интерьер для вашего любимого дома и квартиры
+        </h1>
         <div class="opening__glasses opening__glasses_pc">
           <BaseGlass class="opening__glass opening__glass_1">
             Интерьер для кухни <br>
