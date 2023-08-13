@@ -20,7 +20,11 @@ function changeBurgerVisibility () {
           <img src="/images/logo/logoW.svg" alt="logo" class="header__logo">
         </NuxtLink>
         <BaseNavigation type="header" class="header__nav" />
-        <BaseBurger :is-open="isBurgerOpen" class="header__burger-button" @click="changeBurgerVisibility" />
+        <BaseBurger
+          :is-open="isBurgerOpen"
+          class="header__burger-button"
+          @click="changeBurgerVisibility"
+        />
         <Teleport to="body">
           <TransitionOpacity>
             <BaseMenu v-if="isBurgerOpen" @click-nav="isBurgerOpen = false" />
@@ -34,7 +38,9 @@ function changeBurgerVisibility () {
 
 <style scoped lang="scss">
 .header-wrapper {
-  background: linear-gradient($trnsp-d-tree, $trnsp-d-tree), url("/images/bg/opening.png") no-repeat;
+  background:
+    linear-gradient($trnsp-d-tree, $trnsp-d-tree),
+    url("/images/bg/opening.png") no-repeat;
   background-size: cover;
   background-position: center;
   margin-bottom: 120px;

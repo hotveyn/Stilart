@@ -33,19 +33,19 @@ import BaseGlass from '~/components/base/BaseGlass.vue'
         <FormOpening />
       </div>
       <div class="opening__glasses opening__glasses_mob">
-        <BaseGlass class="opening__glass ">
+        <BaseGlass class="opening__glass">
           Интерьер для кухни <br>
           от 14 440₽
         </BaseGlass>
-        <BaseGlass class="opening__glass ">
+        <BaseGlass class="opening__glass">
           Интерьер для гостиной <br>
           от 18 999₽
         </BaseGlass>
-        <BaseGlass class="opening__glass ">
+        <BaseGlass class="opening__glass">
           Интерьер для спальни <br>
           от 16 999₽
         </BaseGlass>
-        <BaseGlass class="opening__glass ">
+        <BaseGlass class="opening__glass">
           Интерьер для ванной <br>
           от 19 999₽
         </BaseGlass>
@@ -143,7 +143,6 @@ import BaseGlass from '~/components/base/BaseGlass.vue'
 
     &__glass {
       position: static;
-
     }
   }
 }

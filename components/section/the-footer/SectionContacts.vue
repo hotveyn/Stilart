@@ -58,7 +58,11 @@ import BaseLine from '~/components/base/BaseLine.vue'
             </div>
           </div>
         </div>
-        <img class="contacts__map" src="/images/projects/projects0.jpg" alt="map">
+        <img
+          class="contacts__map"
+          src="/images/projects/projects0.jpg"
+          alt="map"
+        >
       </div>
     </div>
     <BaseLine color="white" top="20%" width="100%" />
@@ -70,7 +74,7 @@ import BaseLine from '~/components/base/BaseLine.vue'
 .contacts {
   position: relative;
   padding: adpval(40, 110) 0;
-  background: linear-gradient(180deg, $tree, #ab8b5c) ;
+  background: linear-gradient(180deg, $tree, #ab8b5c);
   color: $white;
 
   &__content {
@@ -81,7 +85,7 @@ import BaseLine from '~/components/base/BaseLine.vue'
     height: 590px;
     margin-top: 50px;
     display: grid;
-    grid-template-columns: 1.1fr .9fr;
+    grid-template-columns: 1.1fr 0.9fr;
     align-items: center;
     gap: 25px;
   }
@@ -125,7 +129,6 @@ import BaseLine from '~/components/base/BaseLine.vue'
 
 @media (width < 1000px) {
   .contacts {
-
     &__dual {
       grid-template-columns: 1fr;
     }

@@ -29,11 +29,23 @@ const members = ref([
         Команда
       </h2>
       <p class="command__description">
-        Наша команда профессионалов работает в концепции "Под ключ" от дизайн-проекта до реализации, заходи и живи! Данный подход включает в себя спектр услуг дизайн-проект, отделочные работы, закупка и разработка мебели, декорирование, авторский контроль и т.д.Свяжитесь с нами сегодня, чтобы узнать больше.
+        Наша команда профессионалов работает в концепции "Под ключ" от
+        дизайн-проекта до реализации, заходи и живи! Данный подход включает в
+        себя спектр услуг дизайн-проект, отделочные работы, закупка и разработка
+        мебели, декорирование, авторский контроль и т.д.Свяжитесь с нами
+        сегодня, чтобы узнать больше.
       </p>
       <div class="command__cards">
-        <div v-for="member in members" :key="member.id" class="command__card command-card">
-          <img class="command-card__img" :src="`/images/members/${member.img}`" alt="member">
+        <div
+          v-for="member in members"
+          :key="member.id"
+          class="command__card command-card"
+        >
+          <img
+            class="command-card__img"
+            :src="`/images/members/${member.img}`"
+            alt="member"
+          >
           <div class="command-card__info">
             <h3 class="command-card__proff h3">
               {{ member.prof }}
@@ -80,7 +92,7 @@ const members = ref([
     object-fit: cover;
   }
 
-  &__info{
+  &__info {
     width: 100%;
     position: absolute;
     bottom: 0;
@@ -90,13 +102,13 @@ const members = ref([
     background-color: $trnsp-tree;
   }
 
-  &__proff{
+  &__proff {
     line-height: 100%;
     font-weight: 700;
     letter-spacing: 2px;
   }
 
-  &__name{
+  &__name {
     margin-top: 5px;
     font-size: 18px;
     font-style: normal;

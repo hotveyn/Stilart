@@ -5,6 +5,10 @@ import { definePageMeta } from '#imports'
 definePageMeta({
   layout: 'secondary'
 })
+
+useSeoMeta({
+  title: 'О нас | StilArt'
+})
 </script>
 
 <template>

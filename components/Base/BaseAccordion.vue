@@ -27,7 +27,7 @@ function changeDescriptionVisibility () {
   <div class="accordion" @click="changeDescriptionVisibility">
     <div class="accordion__head">
       <p class="accordion__title">
-        {{ accordion.id + '. ' + accordion.title }}
+        {{ accordion.id + ". " + accordion.title }}
       </p>
       <div class="accordion__arrow">
         <img

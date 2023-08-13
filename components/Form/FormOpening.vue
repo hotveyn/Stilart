@@ -5,7 +5,13 @@ import BaseCheckbox from '~/components/base/BaseCheckbox.vue'
 import BaseButton from '~/components/base/BaseButton.vue'
 
 const mail = useMail()
-const buttonText = ref<'Отправить' | 'Ошибка. Попробуйте позже' | 'Успешно отправлено' | 'Идёт отправка...' | 'Не всё заполненно!'>('Отправить')
+const buttonText = ref<
+  | 'Отправить'
+  | 'Ошибка. Попробуйте позже'
+  | 'Успешно отправлено'
+  | 'Идёт отправка...'
+  | 'Не всё заполненно!'
+>('Отправить')
 const form = ref<HTMLInputElement | null>(null)
 const nameF = ref<string>('')
 const mailF = ref<string>('')
@@ -34,7 +40,9 @@ async function goMail () {
     }
   } else {
     buttonText.value = 'Не всё заполненно!'
-    setTimeout(() => { buttonText.value = 'Отправить' }, 3000)
+    setTimeout(() => {
+      buttonText.value = 'Отправить'
+    }, 3000)
     form.value.reportValidity()
   }
 }
@@ -45,7 +53,13 @@ async function goMail () {
     <p class="form-opening__title">
       Оставте заявку
     </p>
-    <BaseInput v-model="nameF" required label-text="Имя" placeholder="Тихон" type="text" />
+    <BaseInput
+      v-model="nameF"
+      required
+      label-text="Имя"
+      placeholder="Тихон"
+      type="text"
+    />
     <BaseInput
       v-model="mailF"
       required
@@ -59,7 +73,11 @@ async function goMail () {
       placeholder="7 (999) 999-99-99"
       type="phone"
     />
-    <BaseCheckbox v-model="checkboxF" required label-text="Согласие на обработку перс. данных" />
+    <BaseCheckbox
+      v-model="checkboxF"
+      required
+      label-text="Согласие на обработку перс. данных"
+    />
     <BaseButton class="w" type="transparent" @click.prevent="goMail">
       {{ buttonText }}
     </BaseButton>

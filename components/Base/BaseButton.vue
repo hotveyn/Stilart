@@ -50,7 +50,7 @@ const NuxtLink = resolveComponent('NuxtLink')
       background-color 0.2s;
   }
 
-  &_primary{
+  &_primary {
     background-color: $tree;
     border: 1px solid $tree;
     color: $white;

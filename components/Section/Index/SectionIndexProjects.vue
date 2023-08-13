@@ -91,12 +91,12 @@
     position: absolute;
     object-fit: cover;
     height: 100%;
-    transition: .2s ease;
+    transition: 0.2s ease;
   }
 
   &:hover &__image {
     scale: 1.05;
-    filter: brightness(.7);
+    filter: brightness(0.7);
   }
 
   &:hover &__info {
@@ -110,14 +110,14 @@
     z-index: 3;
     color: white;
     opacity: 0;
-    transition: opacity .2s ease-out;
+    transition: opacity 0.2s ease-out;
   }
 }
 
 @media (width < 800px) {
   .project-card {
     &__image {
-      filter: brightness(.7);
+      filter: brightness(0.7);
     }
 
     &__info {
@@ -128,9 +128,7 @@
 
 @media (width < 580px) {
   .projects {
-
     &__cards {
-
       &_3 {
         grid-template-columns: 1fr;
       }

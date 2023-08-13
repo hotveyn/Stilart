@@ -1,6 +1,4 @@
-<script setup lang="ts">
-
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <section class="our">
@@ -9,12 +7,25 @@
         Наша компания предоставляет услуги по дизайну интерьеров.
       </h2>
       <p class="our__description">
-        Мы берем на себя ответственность за расчеты и подбор материалов, чтобы клиенты могли быть уверены в прозрачности и точности всех затрат.
+        Мы берем на себя ответственность за расчеты и подбор материалов, чтобы
+        клиенты могли быть уверены в прозрачности и точности всех затрат.
       </p>
       <div class="our__images">
-        <img src="/images/projects/projects2.png" alt="our" class="our__image our__image_1">
-        <img src="/images/projects/projects1.png" alt="our" class="our__image our__image_2">
-        <img src="/images/projects/projects3.png" alt="our" class="our__image our__image_3">
+        <img
+          src="/images/projects/projects2.png"
+          alt="our"
+          class="our__image our__image_1"
+        >
+        <img
+          src="/images/projects/projects1.png"
+          alt="our"
+          class="our__image our__image_2"
+        >
+        <img
+          src="/images/projects/projects3.png"
+          alt="our"
+          class="our__image our__image_3"
+        >
       </div>
     </div>
   </section>
@@ -22,7 +33,6 @@
 
 <style scoped lang="scss">
 .our {
-
   &__title {
     text-transform: none;
   }
@@ -50,12 +60,12 @@
     transform-origin: 0 0;
 
     &_2 {
-      animation: trnsf2 .5s ease-in-out forwards;
-      animation-delay: .5s;
+      animation: trnsf2 0.5s ease-in-out forwards;
+      animation-delay: 0.5s;
     }
 
     &_3 {
-      animation: trnsf3 .5s ease-in-out forwards;
+      animation: trnsf3 0.5s ease-in-out forwards;
       animation-delay: 1s;
     }
   }
@@ -65,7 +75,7 @@
   from {
     transform: translateY(0);
   }
-  50%{
+  50% {
   }
   to {
     transform: translateY(-50%);

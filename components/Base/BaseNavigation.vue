@@ -63,7 +63,6 @@ withDefaults(
   }
 
   &_wide {
-
     .a {
       font-size: 40px;
       font-style: normal;
@@ -71,7 +70,7 @@ withDefaults(
       color: white;
     }
   }
-  &_wide &__items{
+  &_wide &__items {
     flex-direction: column;
     gap: 50px;
   }

@@ -1,9 +1,8 @@
 <script setup lang="ts">
-
 import BaseNavigation from '~/components/base/BaseNavigation.vue'
 
 defineEmits<{
-  clickNav: []
+  clickNav: [];
 }>()
 </script>
 
@@ -20,7 +19,7 @@ defineEmits<{
   top: 0;
   width: 100dvw;
   height: 100dvh;
-  backdrop-filter:  brightness(.6);
+  backdrop-filter: brightness(0.6);
   z-index: 4;
   display: flex;
   align-items: center;

@@ -2,13 +2,13 @@
 import { reactive } from '#imports'
 
 const props = defineProps<{
-  top?: string
-  left?: string
-  right?: string
-  bottom?: string
-  width?: string
-  height?: string
-  color: 'wood' | 'white'
+  top?: string;
+  left?: string;
+  right?: string;
+  bottom?: string;
+  width?: string;
+  height?: string;
+  color: 'wood' | 'white';
 }>()
 
 const style = reactive({
@@ -27,7 +27,7 @@ const style = reactive({
 
 <style scoped lang="scss">
 .base-line {
-  opacity: .5;
+  opacity: 0.5;
   display: block;
   min-height: 1px;
   min-width: 1px;

@@ -30,7 +30,7 @@ import BaseLine from '~/components/base/BaseLine.vue'
         </div>
         <div class="about__item about-item">
           <div class="about-item__info">
-            <h3 class="about-item__title ">
+            <h3 class="about-item__title">
               Заходи и живи!
             </h3>
             <div class="about-item__description">
@@ -129,7 +129,7 @@ import BaseLine from '~/components/base/BaseLine.vue'
       flex-direction: column;
     }
 
-    &__image{
+    &__image {
       width: 100%;
     }
   }
