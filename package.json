@@ -21,13 +21,17 @@
     "eslint-config-prettier": "^8.9.0",
     "eslint-plugin-prettier": "^5.0.0",
     "nuxt": "^3.6.5",
+    "nuxt-simple-robots": "^3.1.0",
+    "nuxt-simple-sitemap": "^3.1.5",
     "prettier": "^3.0.0",
     "sass": "^1.64.1",
     "typescript": "^5.1.6"
   },
   "dependencies": {
     "@nuxtjs/google-fonts": "^3.0.2",
+    "@nuxtjs/robots": "^3.0.0",
     "maska": "^2.1.10",
-    "nuxt-mail": "^4.0.1"
+    "nuxt-mail": "^4.0.1",
+    "nuxt-swiper": "^1.2.0"
   }
 }
