@@ -133,4 +133,19 @@
     }
   }
 }
+@media (width < 750px) {
+  .our {
+
+    &__image {
+      width: 100%;
+      &_2 {
+        display: none;
+      }
+
+      &_3 {
+        display: none;
+      }
+    }
+  }
+}
 </style>

@@ -12,7 +12,7 @@ import SectionAboutOur from '~/components/section/about/SectionAboutOur.vue'
 
 <style scoped lang="scss">
 .screen-about {
-  padding: adpval(30, 70) 0 adpval(80, 120) 0;
+  padding: adpval(30, 70) 0 adpval(0, 120) 0;
   display: flex;
   align-items: center;
   justify-content: center;
