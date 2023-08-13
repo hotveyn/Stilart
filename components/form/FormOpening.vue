@@ -11,6 +11,9 @@ const buttonText = ref<
   | 'Идёт отправка...'
   | 'Не всё заполненно!'
 >('Отправить')
+
+const runtimeConfig = useRuntimeConfig()
+
 const form = ref<HTMLInputElement | null>(null)
 const nameF = ref<string>('')
 const mailF = ref<string>('')
@@ -28,7 +31,7 @@ async function goMail () {
       await fetch('/mail/send', {
         method: 'POST',
         body: JSON.stringify({
-          from: 'vasilvaluev@mail.ru',
+          from: runtimeConfig.public.mailUser,
           subject: 'Заполнена заявка с сайта StilArt',
           text: `Имя: ${nameF.value}. Почта: ${mailF.value}. Телефон: ${phoneF.value}`
         })
@@ -65,7 +68,8 @@ async function goMail () {
       label-text="Электронная почта"
       placeholder="example@mail.ru"
       type="email"
-    /><BaseInput
+    />
+    <BaseInput
       v-model="phoneF"
       v-maska
       data-maska="+7 (###) ###-##-##"

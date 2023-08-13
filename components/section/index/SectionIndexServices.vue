@@ -81,6 +81,47 @@ const services: IService[] = [
           </div>
         </NuxtLink>
       </div>
+      <div class="services__cards services__cards_mob">
+        <Swiper
+          :modules="[SwiperAutoplay]"
+          :slides-per-view="1"
+          :loop="true"
+          :gap="20"
+          :autoplay="{
+            delay: 3000,
+            disableOnInteraction: true,
+          }"
+        >
+          <SwiperSlide
+            v-for="service in services"
+            :key="service.id"
+          >
+            <NuxtLink
+              :to="`service/${service.id}`"
+              class="service__card service-card"
+            >
+              <img
+                :src="`/images/services/${service.img}`"
+                alt="service"
+                class="service-card__image"
+              >
+              <div class="service-card__front">
+                <h3 class="h3 service-card__title">
+                  {{ service.title }}
+                </h3>
+              </div>
+              <div class="service-card__back">
+                <p class="service-card__description">
+                  {{ service.description }}
+                </p>
+                <p class="service-card__more">
+                  Подробнее
+                </p>
+              </div>
+            </NuxtLink>
+          </SwiperSlide>
+        </Swiper>
+      </div>
     </div>
     <BaseLine color="white" top="25%" width="80%" />
     <BaseLine color="white" left="30%" top="0" height="80%" />
@@ -204,7 +245,21 @@ const services: IService[] = [
 
 @media (width < 630px) {
   .services__cards {
-    grid-template-columns: 1fr;
+    display: none;
+  }
+}
+
+@media (width >= 630px) {
+  .services__cards_mob {
+    display: none;
+  }
+}
+
+@media (width < 630px) {
+  .services__cards_mob {
+    display: block;
+    max-width: 376px;
+    margin: 0 auto;
   }
 }
 </style>
