@@ -27,7 +27,7 @@ function changeDescriptionVisibility () {
   <div class="accordion" @click="changeDescriptionVisibility">
     <div class="accordion__head">
       <p class="accordion__title">
-        {{ accordion.id + ". " + accordion.title }}
+        {{ accordion.id + '. ' + accordion.title }}
       </p>
       <div class="accordion__arrow">
         <img
@@ -52,7 +52,7 @@ function changeDescriptionVisibility () {
 <style scoped lang="scss">
 .accordion {
   cursor: pointer;
-  padding: 12px 16px 12px 24px;
+  padding: adpval(6, 12) adpval(10, 16) adpval(6, 12) adpval(18, 24);
   border-radius: 4px;
   border: 1.5px solid $black;
 
@@ -63,14 +63,15 @@ function changeDescriptionVisibility () {
   }
 
   &__title {
-    font-size: 28px;
+    font-size: adpval(20, 28);
     font-weight: 500;
   }
 
   &__description {
-    font-size: 24px;
+    font-size: adpval(16, 24);
     font-style: normal;
     font-weight: 500;
+    line-height: 105%;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s;

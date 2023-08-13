@@ -15,7 +15,6 @@ import TheFooter from '~/components/footer/TheFooter.vue'
 
 <style scoped lang="scss">
 .layout-default {
-  scroll-behavior: smooth;
   height: 100dvh;
   display: flex;
   align-items: center;

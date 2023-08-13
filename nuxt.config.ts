@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ['@nuxtjs/google-fonts'],
+  modules: ['@nuxtjs/google-fonts', 'nuxt-mail'],
   components: {
     pathPrefix: false
   },
@@ -18,6 +18,19 @@ export default defineNuxtConfig({
     }
   },
   css: ['assets/css/reset.scss', 'assets/css/_globals.scss'],
+  mail: {
+    message: {
+      to: 'secret105074@gmail.com'
+    },
+    smtp: {
+      host: 'smtp.mail.ru',
+      port: 465,
+      auth: {
+        user: 'vasilvaluev@mail.ru',
+        pass: 'RyqHDbJ1nCvuN6fRS8VQ'
+      }
+    }
+  },
   googleFonts: {
     families: {
       Lunasima: true

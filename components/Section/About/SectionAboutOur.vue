@@ -66,11 +66,9 @@
     transform: translateY(0);
   }
   50%{
-    aspect-ratio: 430 / 360;
   }
   to {
     transform: translateY(-50%);
-    aspect-ratio: 480 / 360;
   }
 }
 
@@ -78,12 +76,8 @@
   from {
     transform: translateY(0);
   }
-  50%{
-    aspect-ratio: 430 / 360;
-  }
   to {
     transform: translateY(-100%);
-    aspect-ratio: 480 / 360;
   }
 }
 </style>

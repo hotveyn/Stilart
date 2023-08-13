@@ -18,11 +18,22 @@ import BaseNavigation from '~/components/base/BaseNavigation.vue'
 <style scoped lang="scss">
 .footer {
   margin-top: 120px;
+
   &__content {
-    padding: 20px 0px;
+    padding: 20px 10px;
     display: flex;
     justify-content: space-between;
+    gap: 20px;
     align-items: center;
+  }
+}
+
+@media (width < 500px) {
+  .footer {
+    &__content {
+      flex-direction: column;
+      align-items: start;
+    }
   }
 }
 </style>

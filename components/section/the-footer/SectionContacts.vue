@@ -58,7 +58,7 @@ import BaseLine from '~/components/base/BaseLine.vue'
             </div>
           </div>
         </div>
-        <img class="contacts__map" src="/images/example/map.png" alt="map">
+        <img class="contacts__map" src="/images/projects/projects0.jpg" alt="map">
       </div>
     </div>
     <BaseLine color="white" top="20%" width="100%" />
@@ -69,8 +69,8 @@ import BaseLine from '~/components/base/BaseLine.vue'
 <style scoped lang="scss">
 .contacts {
   position: relative;
-  padding: 110px 0;
-  background-color: $tree;
+  padding: adpval(40, 110) 0;
+  background: linear-gradient(180deg, $tree, #ab8b5c) ;
   color: $white;
 
   &__content {
@@ -80,10 +80,10 @@ import BaseLine from '~/components/base/BaseLine.vue'
   &__dual {
     height: 590px;
     margin-top: 50px;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
     align-items: center;
-    justify-content: space-between;
-    gap: 95px;
+    gap: 25px;
   }
 
   &__info {
@@ -108,15 +108,31 @@ import BaseLine from '~/components/base/BaseLine.vue'
     }
   }
 
-  &__items {
-    font-size: 24px;
+  &__item {
+    font-size: adpval(20, 24, 1000);
     font-style: normal;
     font-weight: 500;
     line-height: 145%;
   }
 
   &__map {
-    max-height: 590px;
+    border-radius: 4px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+@media (width < 1000px) {
+  .contacts {
+
+    &__dual {
+      grid-template-columns: 1fr;
+    }
+
+    &__map {
+      display: none;
+    }
   }
 }
 </style>

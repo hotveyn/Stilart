@@ -22,6 +22,6 @@ import SectionFAQ from '~/components/section/index/SectionIndexFAQ.vue'
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 120px;
+  gap: adpval(80, 120);
 }
 </style>

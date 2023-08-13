@@ -94,7 +94,7 @@ const services: IService[] = [
   overflow: hidden;
   position: relative;
   width: 100%;
-  padding: 110px 0;
+  padding: adpval(30, 110) 0;
   background: linear-gradient(145deg, $tree, #e1c5a0);
   color: $white;
 
@@ -122,6 +122,11 @@ const services: IService[] = [
 
   &__title {
     position: absolute;
+    font-size: adpval(22, 32);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 145%;
+    text-align: center;
   }
 
   &__image {
@@ -162,7 +167,7 @@ const services: IService[] = [
   &__description {
     text-align: center;
     position: absolute;
-    font-size: 21px;
+    font-size: adpval(16, 21);
     font-style: normal;
     font-weight: 500;
     line-height: 145%;
@@ -178,12 +183,28 @@ const services: IService[] = [
     position: absolute;
     width: 100%;
     bottom: 0;
-    font-size: 22px;
+    font-size: adpval(16, 22);
     font-style: normal;
     font-weight: 500;
     text-align: center;
     background-color: $trnsp-tree;
-    padding: 15px 0;
+    padding: adpval(10, 15) 0;
+  }
+}
+
+@media (width < 1180px) {
+  .services__title {
+    text-align: center;
+  }
+  .services__cards {
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+  }
+}
+
+@media (width < 630px) {
+  .services__cards {
+    grid-template-columns: 1fr;
   }
 }
 </style>

@@ -15,6 +15,12 @@
             alt="project"
             class="project-card__image w"
           >
+          <div class="project-card__info">
+            <h3 class="h2 project-card__title">
+              Шоу рум IKEA
+            </h3>
+            <p>В разработке...</p>
+          </div>
         </div>
         <div class="projects__card project-card w">
           <img
@@ -22,6 +28,12 @@
             alt="project"
             class="project-card__image w"
           >
+          <div class="project-card__info">
+            <h3 class="h2 project-card__title">
+              Шоу рум IKEA
+            </h3>
+            <p>В разработке...</p>
+          </div>
         </div>
         <div class="projects__card project-card w">
           <img
@@ -29,6 +41,12 @@
             alt="project"
             class="project-card__image w"
           >
+          <div class="project-card__info">
+            <h3 class="h2 project-card__title">
+              Шоу рум IKEA
+            </h3>
+            <p>В разработке...</p>
+          </div>
         </div>
       </div>
     </div>
@@ -46,8 +64,7 @@
 
   &__cards {
     display: grid;
-    height: 90dvh;
-    max-height: 850px;
+    min-height: 90dvh;
 
     &_3 {
       grid-template-columns: 1fr 1fr;
@@ -62,30 +79,62 @@
 
 .project-card {
   min-height: 350px;
-  transition: .2s;
   overflow: hidden;
   z-index: 2;
   cursor: pointer;
-
-  &:hover {
-    box-shadow: 0 0 10px #3a3a3a;
-    z-index: 3;
-    transform: translateX(20px);
-    border-radius: 2px;
-  }
-
-  &:nth-child(2) {
-    height: 100%;
-
-    &:hover {
-
-      transform: translateX(-20px);
-    }
-  }
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &__image {
+    position: absolute;
     object-fit: cover;
     height: 100%;
+    transition: .2s ease;
+  }
+
+  &:hover &__image {
+    scale: 1.05;
+    filter: brightness(.7);
+  }
+
+  &:hover &__info {
+    opacity: 1;
+  }
+
+  &__info {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    z-index: 3;
+    color: white;
+    opacity: 0;
+    transition: opacity .2s ease-out;
+  }
+}
+
+@media (width < 800px) {
+  .project-card {
+    &__image {
+      filter: brightness(.7);
+    }
+
+    &__info {
+      opacity: 1;
+    }
+  }
+}
+
+@media (width < 580px) {
+  .projects {
+
+    &__cards {
+
+      &_3 {
+        grid-template-columns: 1fr;
+      }
+    }
   }
 }
 </style>

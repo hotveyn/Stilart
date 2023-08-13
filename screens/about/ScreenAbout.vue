@@ -10,13 +10,13 @@ import SectionAboutOur from '~/components/section/about/SectionAboutOur.vue'
   </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 .screen-about {
-  padding: 70px 0 120px 0;
+  padding: adpval(30, 70) 0 adpval(80, 120) 0;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 120px;
+  gap: adpval(80, 120);
 }
 </style>

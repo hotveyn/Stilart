@@ -11,11 +11,6 @@ withDefaults(
   <nav :class="[`nav_${type}`]" class="nav">
     <ul class="nav__items w">
       <li class="nav__item">
-        <NuxtLink to="/" class="a">
-          Главная
-        </NuxtLink>
-      </li>
-      <li class="nav__item">
         <NuxtLink to="/#about" class="a">
           О нас
         </NuxtLink>
@@ -54,27 +49,31 @@ withDefaults(
   display: flex;
   align-items: center;
 
+  .a {
+    font-size: adpval(14, 17, 1180, 700);
+    font-style: normal;
+    font-weight: 500;
+  }
+
   &__items {
     display: flex;
     align-items: center;
-    gap: 35px;
+    flex-wrap: wrap;
+    gap: adpval(15, 35, 1180, 700);
   }
 
   &_wide {
-    width: 100%;
 
+    .a {
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 500;
+      color: white;
+    }
   }
-
-  &_wide &__items {
-    width: 100%;
-    justify-content: space-between;
-    color: white;
-  }
-
-  .a {
-    font-size: 17px;
-    font-style: normal;
-    font-weight: 500;
+  &_wide &__items{
+    flex-direction: column;
+    gap: 50px;
   }
 
   &_header {

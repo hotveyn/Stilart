@@ -7,11 +7,6 @@ import SecondaryHeader from '~/components/header/SecondaryHeader.vue'
   <div class="layout-secondary w">
     <SecondaryHeader />
     <main class="main w">
-      <div class="container-bg layout-secondary__logo">
-        <NuxtLink to="/">
-          <img src="/images/logo/logoBSc.svg" alt="logo" class="header__logo">
-        </NuxtLink>
-      </div>
       <slot />
     </main>
     <TheFooter />
@@ -25,9 +20,5 @@ import SecondaryHeader from '~/components/header/SecondaryHeader.vue'
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
-
-  &__logo{
-    margin-top: 50px;
-  }
 }
 </style>
