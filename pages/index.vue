@@ -10,6 +10,26 @@ useHead({
       rel: 'icon',
       type: 'image/png',
       href: '/favicon.ico'
+    },
+    {
+      rel: 'preload',
+      as: 'image',
+      href: '/images/bg/opening1.jpg'
+    },
+    {
+      rel: 'preload',
+      as: 'image',
+      href: '/images/bg/opening2.jpg'
+    },
+    {
+      rel: 'preload',
+      as: 'image',
+      href: '/images/bg/opening3.png'
+    },
+    {
+      rel: 'preload',
+      as: 'image',
+      href: '/images/bg/opening4.jpg'
     }
   ]
 })

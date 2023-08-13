@@ -10,22 +10,18 @@ import TransitionOpacitySemi from '~/components/transition/TransitionOpacitySemi
 const images = ref([
   {
     id: 1,
-    isShow: false,
     url: '/images/bg/opening1.jpg'
   },
   {
     id: 2,
-    isShow: false,
     url: '/images/bg/opening2.jpg'
   },
   {
     id: 3,
-    isShow: false,
     url: '/images/bg/opening3.png'
   },
   {
     id: 4,
-    isShow: false,
     url: '/images/bg/opening4.jpg'
   }
 ])
