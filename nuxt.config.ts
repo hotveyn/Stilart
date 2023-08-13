@@ -1,6 +1,17 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ['@nuxtjs/google-fonts', 'nuxt-mail'],
+  modules: [
+    'nuxt-simple-robots',
+    'nuxt-simple-sitemap',
+    'nuxt-swiper',
+    '@nuxtjs/google-fonts',
+    'nuxt-mail'
+  ],
+  runtimeConfig: {
+    public: {
+      mailUser: process.env.MAIL_USER
+    }
+  },
   components: {
     pathPrefix: false
   },
@@ -20,14 +31,14 @@ export default defineNuxtConfig({
   css: ['assets/css/reset.scss', 'assets/css/_globals.scss'],
   mail: {
     message: {
-      to: 'secret105074@gmail.com'
+      to: process.env.MAIL_TO
     },
     smtp: {
-      host: 'smtp.mail.ru',
-      port: 465,
+      host: process.env.MAIL_HOST,
+      port: process.env.MAIL_PORT,
       auth: {
-        user: 'vasilvaluev@mail.ru',
-        pass: 'RyqHDbJ1nCvuN6fRS8VQ'
+        user: process.env.MAIL_USER,
+        pass: process.env.MAIL_PASS
       }
     }
   },
