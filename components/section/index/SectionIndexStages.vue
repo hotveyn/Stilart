@@ -1,5 +1,67 @@
 <script setup lang="ts">
-// TODO: анимация автопереходов
+
+import { onMounted } from '#imports'
+
+const cardUnits = ref([
+  {
+    id: 1,
+    title: 'Проект',
+    description: ` Детальный план дизайна интерьера, который включает в себя выбор
+                цветовой гаммы, расстановку мебели, выбор текстильных изделий и
+                других элементов декора. Проект помогает клиенту понять, как
+                будет выглядеть их интерьер, и дает возможность внести изменения
+                до начала реализации.`,
+    isActive: false
+  },
+  {
+    id: 2,
+    title: 'Смета',
+    description: `
+                Оценка стоимости ремонтных и отделочных работ, необходимых для
+                реализации проекта дизайна интерьеров. Составление сметы
+                является важным этапом процесса создания дизайна интерьеров,
+                поскольку позволяет определить финансовые затраты и спланировать
+                бюджет проекта.`,
+    isActive: false
+  },
+  {
+    id: 3,
+    title: 'Ремонт',
+    description: `
+                Обновление и восстановление жилых или коммерческих помещений.
+                Может включать в себя замену поверхностей, установку новых
+                материалов, изменение планировки и другие работы, необходимые
+                для того, чтобы помещение выглядело свежим и современным.`,
+    isActive: true
+  }
+])
+
+interface stageIndexIterator extends Generator<number, number, number> {
+}
+
+function* stageIndexGenerator (): stageIndexIterator {
+  yield 0
+  yield 1
+  return 2
+}
+
+onMounted(() => {
+  let stagesIndex = stageIndexGenerator()
+  setInterval(() => {
+    const stageIndex = stagesIndex.next()
+    cardUnits.value.forEach((cardUnit, index) => {
+      if (index === stageIndex.value) {
+        cardUnit.isActive = true
+        return
+      }
+      cardUnit.isActive = false
+    })
+
+    if (stageIndex.done) {
+      stagesIndex = stageIndexGenerator()
+    }
+  }, 3000)
+})
 </script>
 
 <template>
@@ -10,59 +72,23 @@
       </h2>
       <div class="stages__grid stages-grid w">
         <div class="stages-grid__cards">
-          <div class="stages-grid__cards-unit">
+          <div
+            v-for="cardUnit in cardUnits"
+            :key="cardUnit.id"
+            :class="{'stages-grid__cards-unit_active': cardUnit.isActive}"
+            class="stages-grid__cards-unit"
+          >
             <div class="stages-grid__unit">
               <p class="stages-grid__number">
-                1
+                {{ cardUnit.id }}
               </p>
             </div>
             <div class="stages-grid__card sg-card">
               <h3 class="sg-card__title">
-                Проект
+                {{ cardUnit.title }}
               </h3>
               <p class="sg-card__description">
-                Детальный план дизайна интерьера, который включает в себя выбор
-                цветовой гаммы, расстановку мебели, выбор текстильных изделий и
-                других элементов декора. Проект помогает клиенту понять, как
-                будет выглядеть их интерьер, и дает возможность внести изменения
-                до начала реализации.
-              </p>
-            </div>
-          </div>
-          <div class="stages-grid__cards-unit">
-            <div class="stages-grid__unit">
-              <p class="stages-grid__number">
-                2
-              </p>
-            </div>
-            <div class="stages-grid__card sg-card">
-              <h3 class="sg-card__title h3">
-                Смета
-              </h3>
-              <p class="sg-card__description">
-                Оценка стоимости ремонтных и отделочных работ, необходимых для
-                реализации проекта дизайна интерьеров. Составление сметы
-                является важным этапом процесса создания дизайна интерьеров,
-                поскольку позволяет определить финансовые затраты и спланировать
-                бюджет проекта.
-              </p>
-            </div>
-          </div>
-          <div class="stages-grid__cards-unit">
-            <div class="stages-grid__unit">
-              <p class="stages-grid__number">
-                3
-              </p>
-            </div>
-            <div class="stages-grid__card sg-card">
-              <h3 class="sg-card__title h3">
-                Ремонт
-              </h3>
-              <p class="sg-card__description">
-                Обновление и восстановление жилых или коммерческих помещений.
-                Может включать в себя замену поверхностей, установку новых
-                материалов, изменение планировки и другие работы, необходимые
-                для того, чтобы помещение выглядело свежим и современным.
+                {{ cardUnit.description }}
               </p>
             </div>
           </div>
@@ -104,6 +130,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+
   }
 
   &__line {
@@ -128,6 +155,7 @@
     font-weight: 500;
     z-index: 2;
     background-color: $white;
+    transition: color .5s, background-color .5s;
 
     &_final {
       outline-color: $tree;
@@ -141,6 +169,7 @@
   padding: adpval(10, 20, 1700, 900);
   border: 1px solid $black;
   border-radius: 4px;
+  transition: color .5s, background-color .5s;
 
   &__title {
     font-size: adpval(24, 32, 1700, 900);
@@ -156,7 +185,12 @@
     line-height: 145%;
   }
 }
-
+.stages-grid__cards-unit_active {
+  .stages-grid__number, .sg-card {
+    color: white;
+    background-color: $tree;
+  }
+}
 @media (width < 900px) {
   .stages-grid {
     flex-direction: row-reverse;
