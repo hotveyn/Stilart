@@ -19,10 +19,6 @@ const images = ref([
   {
     id: 3,
     url: '/images/bg/opening3.png'
-  },
-  {
-    id: 4,
-    url: '/images/bg/opening4.jpg'
   }
 ])
 const currentImage = ref<string>(images.value.at(-1)!.url as string)
