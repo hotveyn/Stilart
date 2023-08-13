@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "@nuxtjs/google-fonts": "^3.0.2",
+    "maska": "^2.1.10",
     "nuxt-mail": "^4.0.1"
   }
 }

@@ -43,6 +43,12 @@ const modelValue = defineModel()
       color: rgba(255, 255, 255, 0.6);
       font-weight: 300;
     }
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
   }
 }
 </style>

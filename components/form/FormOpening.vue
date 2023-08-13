@@ -4,7 +4,6 @@ import BaseInput from '~/components/base/BaseInput.vue'
 import BaseCheckbox from '~/components/base/BaseCheckbox.vue'
 import BaseButton from '~/components/base/BaseButton.vue'
 
-const mail = useMail()
 const buttonText = ref<
   | 'Отправить'
   | 'Ошибка. Попробуйте позже'
@@ -30,7 +29,7 @@ async function goMail () {
         method: 'POST',
         body: JSON.stringify({
           from: 'vasilvaluev@mail.ru',
-          subject: 'Incredible',
+          subject: 'Заполнена заявка с сайта StilArt',
           text: `Имя: ${nameF.value}. Почта: ${mailF.value}. Телефон: ${phoneF.value}`
         })
       })
@@ -68,10 +67,13 @@ async function goMail () {
       type="email"
     /><BaseInput
       v-model="phoneF"
+      v-maska
+      data-maska="+7 (###) ###-##-##"
       required
+      pattern="^(?:\+7\s)?\(\d{3}\)\s\d{3}-\d{2}-\d{2}$"
       label-text="Номер телефона"
       placeholder="7 (999) 999-99-99"
-      type="phone"
+      type="text"
     />
     <BaseCheckbox
       v-model="checkboxF"
