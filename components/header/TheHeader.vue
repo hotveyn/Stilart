@@ -39,12 +39,12 @@ function * imagesIndexGenerator (): imagesIndexIterator {
 }
 
 onMounted(() => {
-  let imagesId = imagesIndexGenerator()
+  let imagesIndex = imagesIndexGenerator()
   setInterval(() => {
-    const imageId = imagesId.next()
-    currentImage.value = images.value[imageId.value]!.url as string
-    if (imageId.done) {
-      imagesId = imagesIndexGenerator()
+    const imageIndex = imagesIndex.next()
+    currentImage.value = images.value[imageIndex.value]!.url as string
+    if (imageIndex.done) {
+      imagesIndex = imagesIndexGenerator()
     }
   }, 6000)
 })
