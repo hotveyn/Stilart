@@ -30,8 +30,7 @@ interface imagesIndexIterator extends Generator<number, number, number> {
 function * imagesIndexGenerator (): imagesIndexIterator {
   yield 0
   yield 1
-  yield 2
-  return 3
+  return 2
 }
 
 onMounted(() => {
