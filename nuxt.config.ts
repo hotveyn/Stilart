@@ -5,7 +5,8 @@ export default defineNuxtConfig({
     'nuxt-simple-sitemap',
     'nuxt-swiper',
     '@nuxtjs/google-fonts',
-    'nuxt-mail'
+    'nuxt-mail',
+    'nuxt-gtag'
   ],
   runtimeConfig: {
     public: {
@@ -50,7 +51,8 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      title: 'StilArt'
+      title: 'StilArt',
+      description: ''
     }
   }
 })

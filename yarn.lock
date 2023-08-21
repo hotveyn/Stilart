@@ -5367,6 +5367,15 @@ nuxt-alias-path@^1.0.0:
   resolved "https://registry.yarnpkg.com/nuxt-alias-path/-/nuxt-alias-path-1.0.0.tgz#b700da66e6a4c050a18800306fd3f68a52e4968f"
   integrity sha512-Brt1kbn6MxiYOo7B1B3Plz+NoMNLCPUzcQzcFOlSdxFFVtx5lqQoUvlQ/FlEuRZX0p7uKUiR3ItK7IeMRIqdAA==
 
+nuxt-gtag@^0.6.1:
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/nuxt-gtag/-/nuxt-gtag-0.6.1.tgz#6bcbf797d194489cf2a3dc287d37846b41c06be8"
+  integrity sha512-HQQkspu60QbJwLnL8+ASQC2GKZJtnlez4JD9TwJzCtdkClcsK2yvb2kEKYK3veVWkB2dWeFd7ZybE1RQyYlanQ==
+  dependencies:
+    "@nuxt/kit" "^3.6.5"
+    defu "^6.1.2"
+    pathe "^1.1.1"
+
 nuxt-mail@^4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/nuxt-mail/-/nuxt-mail-4.0.1.tgz#f36110658693b9454f7bc30f01012d1e06fbd0c2"

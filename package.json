@@ -31,6 +31,7 @@
     "@nuxtjs/google-fonts": "^3.0.2",
     "@nuxtjs/robots": "^3.0.0",
     "maska": "^2.1.10",
+    "nuxt-gtag": "^0.6.1",
     "nuxt-mail": "^4.0.1",
     "nuxt-swiper": "^1.2.0"
   }
